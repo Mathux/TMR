@@ -1,0 +1,6 @@
+torch
+orjson
+numpy
+gdown
+transformers
+gradio
