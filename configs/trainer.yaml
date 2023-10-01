@@ -1,0 +1,31 @@
+trainer:
+  _target_: pytorch_lightning.Trainer
+
+  max_epochs: 1000
+  log_every_n_steps: 50
+  num_sanity_val_steps: 0
+  check_val_every_n_epoch: 1
+  accelerator: gpu
+  devices: 1
+
+  callbacks:
+    - _target_: pytorch_lightning.callbacks.ModelCheckpoint
+      filename: latest-{epoch}
+      every_n_epochs: 1
+      save_top_k: 1
+      save_last: true
+    - _target_: pytorch_lightning.callbacks.ModelCheckpoint
+      filename: latest-{epoch}
+      monitor: step
+      mode: max
+      every_n_epochs: 100
+      save_top_k: -1
+      save_last: false
+    - _target_: src.callback.progress.ProgressLogger
+      precision: 3
+    - _target_: src.callback.tqdmbar.TQDMProgressBar
+
+  logger:
+    _target_: src.logger.csv.CSVLogger
+    save_dir: ${run_dir}
+    name: logs

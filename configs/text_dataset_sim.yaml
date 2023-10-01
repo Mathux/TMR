@@ -1,0 +1,21 @@
+defaults:
+  - data: humanml3d
+  - defaults
+  - _self_
+
+run_dir: outputs/tmr_humanml3d
+feats: false
+text: ???
+split: train
+
+ckpt_name: last
+device: cuda
+
+data:
+  preload: false
+  text_to_token_emb:
+    preload: false
+    disable: true
+  text_to_sent_emb:
+    preload: false
+    disable: true

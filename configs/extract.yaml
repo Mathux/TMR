@@ -1,0 +1,6 @@
+defaults:
+  - defaults
+  - _self_
+
+run_dir: ???
+ckpt: last

@@ -1,0 +1,21 @@
+defaults:
+  - motion_loader: guoh3dfeats
+  - _self_
+
+_target_: src.data.text_motion.TextMotionDataset
+
+path: datasets/annotations/${hydra:runtime.choices.data}
+
+text_to_token_emb:
+  _target_: src.data.text.TokenEmbeddings
+  path: datasets/annotations/${hydra:runtime.choices.data}
+  modelname: distilbert-base-uncased
+  preload: true
+
+text_to_sent_emb:
+  _target_: src.data.text.SentenceEmbeddings
+  path: datasets/annotations/${hydra:runtime.choices.data}
+  modelname: sentence-transformers/all-mpnet-base-v2
+  preload: true
+
+preload: true

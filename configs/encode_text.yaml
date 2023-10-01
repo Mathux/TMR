@@ -1,0 +1,9 @@
+defaults:
+  - defaults
+  - _self_
+
+run_dir: ???
+text: ???
+
+ckpt_name: last
+device: cuda

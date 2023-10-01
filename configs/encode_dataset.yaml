@@ -1,0 +1,15 @@
+dataloader:
+  _target_: torch.utils.data.DataLoader
+  batch_size: 32
+  num_workers: 8
+  shuffle: true
+
+defaults:
+  - data: humanml3d
+  - defaults
+  - _self_
+
+run_dir: ???
+
+ckpt_name: last
+device: cuda

@@ -1,0 +1,6 @@
+defaults:
+  - data: humanml3d
+  - defaults
+  - _self_
+
+device: cuda

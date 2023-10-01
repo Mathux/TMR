@@ -1,0 +1,17 @@
+version: 1
+
+formatters:
+  verysimple:
+    format: '%(message)s'
+
+handlers:
+  console:
+    class: src.logging.TqdmLoggingHandler
+    formatter: verysimple
+
+root:
+  level: ${logger_level}
+  handlers: [console]
+
+
+disable_existing_loggers: false

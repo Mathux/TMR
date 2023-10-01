@@ -1,0 +1,16 @@
+# @package __global__
+
+run_dir: logs
+
+hydra:
+  run:
+    dir: ${run_dir}
+
+seed: 1234
+logger_level: INFO
+
+
+defaults:
+  - _self_
+  - override hydra/job_logging: tqdm
+  - override hydra/hydra_logging: tqdm

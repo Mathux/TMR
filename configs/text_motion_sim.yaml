@@ -1,0 +1,11 @@
+defaults:
+  - defaults
+  - _self_
+
+run_dir: ???
+npy: ???
+feats: false
+text: ???
+
+ckpt_name: last
+device: cuda

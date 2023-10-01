@@ -1,0 +1,33 @@
+version: 1
+
+formatters:
+  simple:
+    format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+    datefmt: '%d/%m/%y %H:%M:%S'
+
+  colorlog:
+    (): colorlog.ColoredFormatter
+    format: '[%(white)s%(asctime)s%(reset)s] %(log_color)s%(levelname)s%(reset)s   %(message)s'
+    datefmt: '%d/%m/%y %H:%M:%S'
+
+    log_colors:
+      DEBUG: purple
+      INFO: blue
+      WARNING: yellow
+      ERROR: red
+      CRITICAL: red
+
+handlers:
+  console:
+    class: src.logging.TqdmLoggingHandler
+    formatter: colorlog
+  file_out:
+    class: logging.FileHandler
+    formatter: simple
+    filename: ${run_dir}/${hydra.job.name}.out
+
+root:
+  level: ${logger_level}
+  handlers: [console, file_out]
+
+disable_existing_loggers: false

@@ -1,0 +1,9 @@
+# @package __global__
+
+run_dir: debug/
+
+trainer:
+  max_epochs: 1
+  check_val_every_n_epoch: 1
+  callbacks: null
+  profiler: simple

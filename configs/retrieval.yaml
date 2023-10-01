@@ -1,0 +1,12 @@
+defaults:
+  - defaults
+  - _self_
+
+device: cuda
+
+run_dir: ???
+protocol: all #  (is all 4), normal (a), threshold (b), nsim (c), guo (d)
+threshold: 0.95 # threashold to compute (b)
+
+ckpt: last
+batch_size: 256

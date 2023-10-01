@@ -1,0 +1,14 @@
+defaults:
+  - data: humanml3d
+  - defaults
+  - _self_
+
+data:
+  preload: false
+  motion_loader:
+    normalizer:
+      disable: true
+  text_to_token_emb:
+    disable: true
+  text_to_sent_emb:
+    disable: true

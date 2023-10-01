@@ -1,0 +1,14 @@
+defaults:
+  - renderer: matplotlib
+  - defaults
+  - _self_
+
+npy_path: ???
+title: ""
+
+swap_axis: false
+guofeats: false
+rifkefeats: false
+
+renderer:
+  canonicalize: true

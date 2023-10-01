@@ -1,0 +1,16 @@
+# @package __global__
+
+run_dir: debug/
+
+data:
+  tiny: true
+  preload: false
+
+dataloader:
+  num_workers: 0
+  shuffle: false
+
+trainer:
+  enable_model_summary: false
+  max_epochs: 3
+  check_val_every_n_epoch: 1

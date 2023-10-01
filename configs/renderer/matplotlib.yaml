@@ -1,0 +1,7 @@
+_target_: src.renderer.matplotlib.MatplotlibRender
+
+jointstype: "guoh3djoints"
+fps: 20.0
+colors: ['black', 'magenta', 'red', 'green', 'blue']
+figsize: 4
+canonicalize: true
