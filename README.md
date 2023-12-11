@@ -168,10 +168,14 @@ bash prepare/download_pretrain_models.sh
 ```
 
 This will put pretrained models in the ``models`` folder.
-Currently, there is:
+Currently, there are:
 - TMR trained on HumanML3D with Guo et al. humanml3d features ``models/tmr_humanml3d_guoh3dfeats``
+- TMR trained on KIT-ML with Guo et al. humanml3d features ``models/tmr_kitml_guoh3dfeats``
 
-More models will be available later on.
+Not that KIT-ML is used with the Guo et al. ``humanml3d`` features (it is not a mistake). The motions come from AMASS and are converted (I am not using the MMM joints from the original KIT-ML).
+This makes the two models works in the same motion space.
+
+More models may be available later on.
 
 ## Evaluation :bar_chart:
 
